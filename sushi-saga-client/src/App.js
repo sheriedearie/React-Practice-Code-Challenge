@@ -9,12 +9,13 @@ const API = "http://localhost:3000/sushis"
 class App extends Component {
   constructor() {
     super()
-    this.state = {
+    this.setState = {
       sushi: []
     }
   }
 
   componentDidMount() {
+    console.log(API)
       fetch(API) 
         .then(res => res.json())
         .then(data => console.log(data))
