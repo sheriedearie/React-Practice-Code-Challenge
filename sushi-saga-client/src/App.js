@@ -9,7 +9,7 @@ const API = "http://localhost:3000/sushis"
 class App extends Component {
   constructor() {
     super()
-    this.setState = {
+    this.state = {
       sushi: []
     }
   }
@@ -18,15 +18,17 @@ class App extends Component {
     console.log(API)
       fetch(API) 
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => this.setState({sushi: [...data]}))
+       
   }
 
- 
+  // render() {
+  //   return <SomeChildComponent color={this.state.color} />;
   
   render() {
     return (
       <div className="app">
-        <SushiContainer />
+        <SushiContainer sushi={this.state.sushi}/>
         <Table />
       </div>
     );

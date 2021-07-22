@@ -3,11 +3,15 @@ import MoreButton from '../components/MoreButton'
 
 const SushiContainer = (props) => {
   return (
-    <Fragment>
+    <Fragment> 
       <div className="belt">
-        <ul>
-          {this.props.sushi.map()}
-        </ul>
+        const renderSushi = () => {SushiContainer.props.map(props)}
+        {/* const sushi = () { */}
+          {/* {props.map(sushi => <div key={sushi}> {sushi} </div>)} */}
+        {/* } */}
+        {/* {stations.map(station => <div key={station}> {station} </div>)} */}
+        {/* const renderSushi = this.props.sushi.map */}
+        
         
         <MoreButton />
       </div>
